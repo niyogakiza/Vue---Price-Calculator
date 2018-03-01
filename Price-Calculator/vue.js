@@ -9,9 +9,9 @@ Vue.component('item', {
     },
     props:['label', 'value'],// prop declaration
     methods:{
-        send(ev){
+        send(v){
             //sending event to Vue data
-            this.$emit('input', ev)
+            this.$emit('input', v)
         }
     }
 });
