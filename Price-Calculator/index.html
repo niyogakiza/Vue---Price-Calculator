@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <title>Title</title>
+</head>
+<body>
+<div id="app">
+    <!--storing a component, and accomplish two way data-->
+    <!--v-model = v-bind:value + v-on:input ">-->
+    <item label="Price" v-model="price"></item> <!--Assign value to props-->
+    <item label="Wrapping fee" v-model="wrapping"></item>
+    <item label="Shipping" v-model="shipping"></item>
+    <item label="Discount" v-model="discount"></item>
+
+    <hr>
+    <p><span>Total Cost: </span> {{ total }}</p>
+
+</div>
+<!-- Creating a component -->
+<template id="temp">
+    <div>
+        <label>{{ label }}</label> <!--label is a prop-->
+        <br>
+        <input v-bind:value="value" v-on:input="send($event.target.value)"/> <!--prop display in template-->
+    </div>
+</template>
+
+
+
+
+
+
+
+<script type="text/javascript"  src="vue.js"></script>
+</body>
+</html>
